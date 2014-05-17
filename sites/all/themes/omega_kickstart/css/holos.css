@@ -1,0 +1,77 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,800);
+@import url(//fonts.googleapis.com/css?family=Gentium+Basic:400,700);
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/holos\.scss}line{font-family:\000034}}
+.menu li {
+  float: left;
+  list-style-type: none !important;
+  list-style-image: none !important; }
+
+/*  
+   .menu
+ {
+    display: block;
+    font-size: 1em;
+    margin: 0 10px;
+    padding: 10px 0 0 0;
+
+    ul {
+      margin: 0;
+      li {
+        display: inline-block;
+        margin: 0 0 7px 0;
+        padding: 0;
+        width: 100%;
+        a {
+          display: block;
+          font-family: $headerfont;
+          font-weight: 600;
+          padding: 12px 16px;
+          text-decoration: none;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }*/
+  /* Main menu 
+  .menu ul li {
+    a {
+      background-color: $mainmenuitembg;
+      border: $mainmenuitemborder;
+      color: $mainmenulinkcolor;
+      text-transform: capitalize;
+
+      &.active,
+      &:hover {
+        background-color: $mainmenuitembghover;
+        border: $mainmenuitemborderhover;
+      }
+      &.active {
+        color: $mainmenuitemfontactive;
+      }
+      &:hover {
+        color: $mainmenuitemfonthover;
+      }
+    }
+  }
+
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/holos\.scss}line{font-family:\0000361}}
+.zone-footer2-wrapper {
+  background-color: #363636; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/holos\.scss}line{font-family:\0000366}}
+.banner-ar {
+  margin-bottom: 10px;
+  border: black solid 1px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/holos\.scss}line{font-family:\0000370}}
+.zone-user-wrapper {
+  position: relative !important;
+  z-index: 200; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/holos\.scss}line{font-family:\0000375}}
+.menu li {
+  float: left;
+  list-style-type: none; }

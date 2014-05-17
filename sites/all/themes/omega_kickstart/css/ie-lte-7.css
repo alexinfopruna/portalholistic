@@ -1,0 +1,254 @@
+/* Include Default Variables & Mixins */
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,800);
+@import url(//fonts.googleapis.com/css?family=Gentium+Basic:400,700);
+/* End Variables & Mixins */
+/**************************************************
+* --
+* 1. Global
+* --
+**************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-7\.scss}line{font-family:\0000310}}
+img {
+  width: auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-7\.scss}line{font-family:\0000313}}
+#messages {
+  z-index: 1000;
+  /*Fix for z-index stacking*/ }
+
+/**************************************************
+* --
+* 2. Section header
+* --
+**************************************************/
+/**********************************************
+* 2.1. Zone user
+**********************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-7\.scss}line{font-family:\0000324}}
+.zone-user-wrapper {
+  width: inherit !important; }
+
+/*******************************************
+* 2.1.1. Region user first
+*******************************************/
+/* User menu */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-7\.scss}line{font-family:\0000331}}
+.block-menu-user-menu .content {
+  width: auto; }
+
+/**********************************************
+* 2.2. Zone branding
+**********************************************/
+/**
+* Search block
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-7\.scss}line{font-family:\0000340}}
+#block-views-exp-display-products-page .views-exposed-widgets {
+  position: relative; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-7\.scss}line{font-family:\0000343}}
+#block-views-exp-display-products-page .views-exposed-widget {
+  padding: 0;
+  position: relative;
+  left: 0px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-7\.scss}line{font-family:\0000348}}
+#block-views-exp-display-products-page .form-text {
+  height: 18px;
+  padding: 5px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-7\.scss}line{font-family:\0000352}}
+#block-views-exp-display-products-page .views-submit-button {
+  position: absolute;
+  right: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-7\.scss}line{font-family:\0000355}}
+  #block-views-exp-display-products-page .views-submit-button .form-submit {
+    float: right;
+    width: 24px;
+    height: 24px; }
+
+/**********************************************
+* 2.3. Zone menu
+**********************************************/
+/**
+* Navigation
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-7\.scss}line{font-family:\0000371}}
+.navigation .primary-menu ul li,
+.navigation .second-menu ul li,
+.zone-menu .block-menu ul li {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  margin-left: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-7\.scss}line{font-family:\0000376}}
+  .navigation .primary-menu ul li a,
+  .navigation .second-menu ul li a,
+  .zone-menu .block-menu ul li a {
+    display: block;
+    float: left;
+    min-height: 100%;
+    height: 28px; }
+
+/**************************************************
+* --
+* 3. Section content
+* --
+**************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-7\.scss}line{font-family:\0000389}}
+.section-content {
+  min-height: auto;
+  height: auto; }
+
+/*******************************************
+* 3.2.1. Sidebar first
+*******************************************/
+/* Search api facet blocks */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-7\.scss}line{font-family:\0000397}}
+.region-sidebar-first .block-facetapi {
+  margin-left: 5px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-7\.scss}line{font-family:\00003100}}
+#search-api-ranges-block-slider-view-form {
+  margin-top: 15px; }
+
+/* Category */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-7\.scss}line{font-family:\00003104}}
+.region-sidebar-first .block-facetapi.field_category .item-list {
+  border: none !important;
+  height: auto !important;
+  padding: 0 !important;
+  overflow-y: visible !important; }
+
+/**************************************************
+* --
+* 5. Commerce specific
+* --
+**************************************************/
+/**********************************************
+* 5.1. Search & Collection page
+**********************************************/
+/**
+* Collection page
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-7\.scss}line{font-family:\00003123}}
+.view-collection-products .view-header .view-collection-products,
+.view-collection-taxonomy-term .view-header .collection-terms {
+  padding-bottom: 5px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-7\.scss}line{font-family:\00003128}}
+.view-collection-products .view-content .item-list .products-per-collection li header,
+.view-collection-taxonomy-term .view-content .item-list .products-per-collection li header {
+  display: block !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-7\.scss}line{font-family:\00003132}}
+.view-collection-products .view-content .item-list .products-per-collection li .field-type-commerce-price .price_prefix p,
+.view-collection-taxonomy-term .view-content .item-list .products-per-collection li .field-type-commerce-price .price_prefix p {
+  padding-right: 5px; }
+
+/**********************************************
+* 5.2. All products page
+**********************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-7\.scss}line{font-family:\00003140}}
+.page-products .view-display-products {
+  clear: both;
+  margin-top: 40px;
+  width: 700px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-7\.scss}line{font-family:\00003146}}
+  .page-products .view-display-products ul li.views-row {
+    display: block;
+    height: auto;
+    margin: 0;
+    width: 225px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-7\.scss}line{font-family:\00003152}}
+  .page-products .view-display-products ul li header {
+    display: block; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-7\.scss}line{font-family:\00003158}}
+  .page-products .view-display-products ul li .content .field-name-commerce-price .price_prefix p {
+    padding-right: 5px; }
+
+/**********************************************
+* 5.3. Product page
+**********************************************/
+/**
+* Add to cart popin.
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-7\.scss}line{font-family:\00003171}}
+div.commerce_add_to_cart_confirmation_overlay {
+  display: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-7\.scss}line{font-family:\00003177}}
+div.messages.commerce-add-to-cart-confirmation .message-inner .view-confirm-message-product-display .view-content {
+  width: 180px !important; }
+
+/**********************************************
+* 5.4. Checkout process
+**********************************************/
+/**
+* Checkout progress
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-7\.scss}line{font-family:\00003191}}
+ul.inline.commerce-checkout-progress li,
+ol.inline.commerce-checkout-progress li {
+  background-image: url("../images/bg_checkout_progress_ie.png");
+  background-position: right center;
+  /* LTR */
+  background-repeat: no-repeat;
+  padding-right: 50px;
+  /* LTR */
+  padding-left: 25px;
+  /* LTR */
+  right: -5px;
+  /* LTR */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-7\.scss}line{font-family:\00003198}}
+  ul.inline.commerce-checkout-progress li.active,
+  ol.inline.commerce-checkout-progress li.active {
+    background-image: url("../images/bg_checkout_progress_ie.png"); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-7\.scss}line{font-family:\00003201}}
+  ul.inline.commerce-checkout-progress li.previous,
+  ol.inline.commerce-checkout-progress li.previous {
+    background-image: url("../images/bg_checkout_progress_ie_visited.png"); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-7\.scss}line{font-family:\00003204}}
+  ul.inline.commerce-checkout-progress li.last,
+  ol.inline.commerce-checkout-progress li.last {
+    background-image: url("../images/bg_checkout_progress_ie_last.png"); }
+
+/**************************************************
+* --
+* 9. User account
+* --
+**************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-7\.scss}line{font-family:\00003216}}
+.page-user .section-footer,
+.page-checkout .section-footer {
+  /**
+   * For modern browsers
+   * 1. The space content is one way to avoid an Opera bug when the
+   *    contenteditable attribute is included anywhere else in the document.
+   *    Otherwise it causes space to appear at the top and bottom of elements
+   *    that are clearfixed.
+   * 2. The use of `table` rather than `block` is only necessary if using
+   *    `:before` to contain the top-margins of child elements.
+   */
+  /**
+   * For IE 6/7 only
+   * Include this rule to trigger hasLayout and contain floats.
+   */
+  *zoom: 1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/mixins\.scss}line{font-family:\0000312}}
+  .page-user .section-footer:before, .page-user .section-footer.cf:after,
+  .page-checkout .section-footer:before,
+  .page-checkout .section-footer.cf:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/mixins\.scss}line{font-family:\0000317}}
+  .page-user .section-footer:after,
+  .page-checkout .section-footer:after {
+    clear: both; }
+
+/* Address book */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-7\.scss}line{font-family:\00003224}}
+.page-user-addressbook .field-name-commerce-customer-address .addressfield-container-inline > div.form-item {
+  float: none;
+  margin: 0; }

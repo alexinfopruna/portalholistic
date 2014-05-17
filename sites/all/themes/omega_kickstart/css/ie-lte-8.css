@@ -1,0 +1,108 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-8\.scss}line{font-family:\000031}}
+img {
+  max-width: inherit;
+  width: auto; }
+
+/**************************************************
+* --
+* 5. Commerce specific
+* --
+**************************************************/
+/**********************************************
+* 5.1. Search & Collection page
+**********************************************/
+/**
+* Collection page
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-8\.scss}line{font-family:\0000317}}
+.view-collection-products .view-header,
+.view-collection-taxonomy-term .view-header {
+  height: auto; }
+
+/**********************************************
+* 5.2. All products page
+**********************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-8\.scss}line{font-family:\0000323}}
+.page-products .view-display-products {
+  clear: both;
+  margin-top: 40px;
+  width: 700px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-8\.scss}line{font-family:\0000328}}
+  .page-products .view-display-products li.views-row {
+    display: block;
+    margin-right: 5px;
+    width: 225px; }
+
+/**
+* Add to cart popin.
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-8\.scss}line{font-family:\0000339}}
+div.messages.commerce-add-to-cart-confirmation .message-inner .button-wrapper {
+  width: 25%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-8\.scss}line{font-family:\0000343}}
+div.messages.commerce-add-to-cart-confirmation .message-inner .view-confirm-message-product-display .view-content {
+  width: 180px !important; }
+
+/**********************************************
+* 5.3. Product page
+**********************************************/
+/* Cloud zoom */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-8\.scss}line{font-family:\0000354}}
+.node-product-type .cloud-zoom-container {
+  margin-left: 130px;
+  position: relative; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-8\.scss}line{font-family:\0000358}}
+  .node-product-type .cloud-zoom-container .cloud-zoom-gallery-thumbs {
+    position: absolute;
+    top: 0;
+    left: -130px;
+    width: 120px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-8\.scss}line{font-family:\0000364}}
+    .node-product-type .cloud-zoom-container .cloud-zoom-gallery-thumbs .cloud-zoom-gallery img {
+      max-width: none; }
+
+/**********************************************
+* 5.4. Checkout process
+**********************************************/
+/**
+* Checkout progress
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-8\.scss}line{font-family:\0000377}}
+ul.inline.commerce-checkout-progress li,
+ol.inline.commerce-checkout-progress li {
+  padding-right: 50px;
+  padding-left: 25px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-8\.scss}line{font-family:\0000382}}
+  ul.inline.commerce-checkout-progress li:after, ul.inline.commerce-checkout-progress li.active:after,
+  ol.inline.commerce-checkout-progress li:after,
+  ol.inline.commerce-checkout-progress li.active:after {
+    background-image: url("../images/bg_checkout_progress_ie.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+    right: -5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-8\.scss}line{font-family:\0000388}}
+  ul.inline.commerce-checkout-progress li.last:after,
+  ol.inline.commerce-checkout-progress li.last:after {
+    background-image: url("../images/bg_checkout_progress_ie_last.png");
+    background-position: right center;
+    background-repeat: no-repeat; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-8\.scss}line{font-family:\0000393}}
+  ul.inline.commerce-checkout-progress li.last.active,
+  ol.inline.commerce-checkout-progress li.last.active {
+    background-image: url("../images/bg_checkout_progress_ie_active_last.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    left: -25px;
+    padding-left: 40px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-8\.scss}line{font-family:\00003100}}
+    ul.inline.commerce-checkout-progress li.last.active:after,
+    ol.inline.commerce-checkout-progress li.last.active:after {
+      background-image: url("../images/bg_checkout_progress_ie_last.png");
+      background-position: right center;
+      background-repeat: no-repeat; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/ie-lte-8\.scss}line{font-family:\00003107}}
+  ul.inline.commerce-checkout-progress li.previous:after,
+  ol.inline.commerce-checkout-progress li.previous:after {
+    background-image: url("../images/bg_checkout_progress_ie_visited.png");
+    background-position: right center;
+    background-repeat: no-repeat; }

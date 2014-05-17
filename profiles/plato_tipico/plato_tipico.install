@@ -1,0 +1,692 @@
+<?php
+
+!function_exists('profiler_v2') ? require_once('libraries/profiler/profiler.inc') : FALSE;
+profiler_v2('plato_tipico');
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ */
+function plato_tipico_install() {
+  include_once DRUPAL_ROOT . '/profiles/standard/standard.install';
+  standard_install();
+  //clean messages
+  drupal_get_messages();
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function plato_tipico_form_install_configure_form_alter(&$form, $form_state) {
+  // Site information.
+  $form['site_information']['site_name']['#default_value'] = $_SERVER['SERVER_NAME'];
+
+  // Admin account.
+  $form['admin_account']['account']['name']['#default_value'] = 'admin';
+
+  // Server settings.
+  $form['server_settings']['site_default_country']['#default_value'] = 'CR';
+  $form['server_settings']['date_default_timezone']['#default_value'] = 'America/Costa Rica';
+
+  // Update notifications.
+  $form['update_notifications']['update_status_module']['#default_value'] = array(1, 2);
+
+  // Disable validate.
+  $form['#validate'] = array();
+
+  $form['l10n_client_wrapper'] = array(
+    '#type' => 'fieldset',
+    '#title' => st('On-page translation and sharing'),
+    '#collapsible' => FALSE,
+  );
+  $form['l10n_client_wrapper']['l10n_client_enable'] = array(
+    '#type' => 'checkbox',
+    '#default_value' => TRUE,
+    '#title' => st('Enable on-page translation input'),
+    '#description' => st('You can always disable this feature (the Localization client module) later, set up permissions or even turn it off per user.'),
+  );
+  $form['l10n_client_wrapper']['l10n_share_wrapper'] = array(
+    '#type' => 'item',
+    '#states' => array(
+      'invisible' => array(
+        'input[name="l10n_client_enable"]' => array('checked' => FALSE),
+      ),
+    ),
+  );
+  $form['l10n_client_wrapper']['l10n_share_wrapper']['l10n_client_sharing'] = array(
+    '#type' => 'checkbox',
+    '#default_value' => TRUE,
+    '#title' => st('Share translations submitted with localize.drupal.org'),
+  );
+
+  // Add both existing submit function and our submit function,
+  // since adding just ours cancels the automated discovery of the original.
+  $form['#submit'] = array('plato_tipico_custom_configure_form_submit', 'install_configure_form_submit');
+
+  //clean messages
+  drupal_get_messages();
+}
+
+/**
+ * Custom submit handler for the localized install.
+ */
+function plato_tipico_custom_configure_form_submit($form, &$form_state) {
+  if ($form_state['values']['l10n_client_enable']) {
+    // Enable the module if the user did not disable it on purpose.
+    module_enable(array('l10n_client'));
+    if ($form_state['values']['l10n_client_sharing']) {
+      // Enable sharing with localize.drupal.org as well.
+      variable_set('l10n_client_use_server', 1);
+      variable_set('l10n_client_server', 'http://localize.drupal.org');
+    }
+  }
+}
+
+function plato_tipico_profile_details() {
+  $details['language'] = "es";
+  return $details;
+}
+
+/**
+ * Implements hook_install_tasks_alter().
+ */
+function plato_tipico_install_tasks_alter(&$tasks, $install_state) {
+
+  unset($tasks['install_import_locales']);
+  unset($tasks['install_import_locales_remaining']);
+  
+
+  $tasks['install_finished']['function'] = '_plato_tipico_install_finished';
+
+  $tasks['install_select_profile']['display'] = FALSE;
+  $tasks['install_select_locale']['display'] = FALSE;
+  $tasks['install_finished']['display'] = FALSE;
+  $tasks['install_select_locale']['type'] = 'normal';
+
+  // The "Welcome" screen needs to come after the first two steps
+  // (profile and language selection), despite the fact that they are disabled.
+  $new_task['install_welcome'] = array(
+    'display' => TRUE,
+    'display_name' => st('Welcome'),
+    'type' => 'form',
+    'run' => isset($install_state['parameters']['welcome']) ? INSTALL_TASK_SKIP : INSTALL_TASK_RUN_IF_REACHED,
+  );
+  $old_tasks = $tasks;
+  $tasks = array_slice($old_tasks, 0, 2) + $new_task + array_slice($old_tasks, 2);
+
+
+  $needs_translations = count($install_state['locales']) > 1 && !empty($install_state['parameters']['locale']) && $install_state['parameters']['locale'] != 'en';
+
+  $new_task['_plato_tipico_import_translation'] = array(
+    'display_name' => st('Set up translations'),
+    'display' => $needs_translations,
+    'run' => $needs_translations ? INSTALL_TASK_RUN_IF_NOT_COMPLETED : INSTALL_TASK_SKIP,
+    'type' => 'batch',
+  );
+  
+  $old_tasks = $tasks;
+  $tasks = array_slice($old_tasks, 0, 9) + $new_task + array_slice($old_tasks, 9);
+
+  _para_llevar_set_theme('tamal');
+}
+
+/**
+ * Custom installation task; perform final steps and redirect the user to the new site if there are no errors.
+ *
+ * @param $install_state
+ *   An array of information about the current installation state.
+ *
+ * @return
+ *   A message informing the user about errors if there was some.
+ */
+function _plato_tipico_install_finished(&$install_state) {
+  drupal_set_title(st('@drupal installation complete', array('@drupal' => drupal_install_profile_distribution_name())), PASS_THROUGH);
+  $messages = drupal_set_message();
+
+  // Remember the profile which was used.
+  variable_set('install_profile', drupal_get_profile());
+  variable_set('install_task', 'done');
+
+  // Flush all caches to ensure that any full bootstraps during the installer
+  // do not leave stale cached data, and that any content types or other items
+  // registered by the install profile are registered correctly.
+  drupal_flush_all_caches();
+
+  // Install profiles are always loaded last
+  db_update('system')
+      ->fields(array('weight' => 1000))
+      ->condition('type', 'module')
+      ->condition('name', drupal_get_profile())
+      ->execute();
+
+  // Cache a fully-built schema.
+  drupal_get_schema(NULL, TRUE);
+
+  // Run cron to populate update status tables (if available) so that users
+  // will be warned if they've installed an out of date Drupal version.
+  // Will also trigger indexing of profile-supplied content or feeds.
+  drupal_cron_run();
+
+  if (isset($messages['error'])) {
+    $output = '<p>' . (isset($messages['error']) ? st('Review the messages above before visiting <a href="@url">your new site</a>.', array('@url' => url(''))) : st('<a href="@url">Visit your new site</a>.', array('@url' => url('')))) . '</p>';
+    return $output;
+  } else {
+    // Since any module can add a drupal_set_message, this can bug the user
+    // when we redirect him to the front page. For a better user experience,
+    // remove all the message that are only "notifications" message.
+    drupal_get_messages('status', TRUE);
+    drupal_get_messages('completed', TRUE);
+    // Migrate adds its messages under the wrong type, see #1659150.
+    drupal_get_messages('ok', TRUE);
+
+    drupal_set_message(st('@drupal installation complete', array('@drupal' => drupal_install_profile_distribution_name()
+            )
+        ));
+
+    // If we don't install drupal using Drush, redirect the user to the front
+    // page.
+    if (!drupal_is_cli()) {
+      if (module_exists('overlay')) {
+        drupal_goto('', array('fragment' => 'overlay=admin'));
+      } else {
+        drupal_goto('');
+      }
+    }
+  }
+}
+
+/**
+ * Force-set a theme at any point during the execution of the request.
+ *
+ * Drupal doesn't give us the option to set the theme during the installation
+ * process and forces enable the maintenance theme too early in the request
+ * for us to modify it in a clean way.
+ */
+function _para_llevar_set_theme($target_theme) {
+  if ($GLOBALS['theme'] != $target_theme) {
+    unset($GLOBALS['theme']);
+
+    drupal_static_reset();
+    $GLOBALS['conf']['maintenance_theme'] = $target_theme;
+    _drupal_maintenance_theme();
+  }
+}
+
+/**
+ * Task callback: shows the welcome screen.
+ */
+function install_welcome($form, &$form_state, &$install_state) {
+  drupal_set_title(st('Welcome'));
+
+  //$message = st('Thank you for choosing Commerce Kickstart!') . '<br />';
+  $message = st('Thank you for choosing the distribution ') . '<strong>Plato típico</strong>, ' . st('sponsored by') . ' ' . 
+             l('7Sabores', 'http://www.7sabores.com', array('attributes' => array('target'=>'_blank'))) . '!' . '<br />';
+  $message .= '<p>' . st('This distribution installs and configure the most common modules used in a typical website, however. However, this distribution has additional modules not enabled and is recommended to activate your liking.') . '<p>';
+  $message .= '<p> ' . st('We invite you to report any incident that occurs during installation by using the following link: ') .
+      l('http://7sabores.com/fe-de-errata', 'http://7sabores.com/fe-de-errata', array('attributes' => array('target'=>'_blank'))) . '.</p>';
+  $message .= '<p>' . st('Also remember to find at ') . l('http://www.7sabores.com', 'http://www.7sabores.com', array('attributes' => array('target'=>'_blank'))) . ' ' .
+      st('other books as well as videos and blogs related to web and mobile development') . '</p>';
+
+  $form = array();
+  $form['welcome_message'] = array(
+    '#markup' => $message,
+  );
+  $form['actions'] = array(
+    '#type' => 'actions',
+  );
+  $form['actions']['submit'] = array(
+    '#type' => 'submit',
+    '#value' => st("Proceed with installation!"),
+    '#weight' => 10,
+  );
+  return $form;
+}
+
+function install_welcome_submit($form, &$form_state) {
+  global $install_state;
+
+  $install_state['parameters']['welcome'] = 'done';
+  $install_state['parameters']['locale'] = 'es';
+}
+
+function plato_tipico_install_tasks($install_state) {
+
+  $tasks['_plato_tipico_combine_ingredients'] = array(
+    'display_name' => st('Combine ingredients'),
+    'type' => 'normal',
+  );
+
+  return $tasks;
+}
+
+/**
+ * Installation step callback.
+ *
+ * @param $install_state
+ *   An array of information about the current installation state.
+ */
+function _plato_tipico_import_translation(&$install_state) {
+  // Enable installation language as default site language.
+  include_once DRUPAL_ROOT . '/includes/locale.inc';
+  $install_locale = $install_state['parameters']['locale'];
+  locale_add_language($install_locale, NULL, NULL, NULL, '', NULL, 1, TRUE);
+
+  // Build batch with l10n_update module.
+  $history = l10n_update_get_history();
+  module_load_include('check.inc', 'l10n_update');
+  $available = l10n_update_available_releases();
+  $updates = l10n_update_build_updates($history, $available);
+
+  module_load_include('batch.inc', 'l10n_update');
+  $updates = _l10n_update_prepare_updates($updates, NULL, array());
+  $batch = l10n_update_batch_multiple($updates, LOCALE_IMPORT_KEEP);
+  return $batch;
+}
+
+function _plato_tipico_combine_ingredients() {
+  global $base_url;
+    
+  //Set public path.
+  variable_set('file_public_path', 'sites/default/files');
+
+  //configure proper prefixes  
+  db_update('languages')->fields(array(
+    'prefix' => 'en',
+  ))->condition('language', 'en')->execute();
+
+  db_update('languages')->fields(array(
+    'prefix' => '',
+  ))->condition('language', 'es')->execute();
+
+  //Set es as default language
+  variable_set('language_default', (object) array('language' => 'es', 'name' => 'Spanish',
+        'native' => 'Español', 'direction' => 0, 'enabled' => 1,
+        'plurals' => 2, 'formula' => '($n!=1)', 'domain' => '', 'prefix' => '',
+        'weight' => 0, 'javascript' => ''));
+
+
+  //Set and configure default theme
+  variable_set('theme_bartik_settings', array(
+    'default_logo' => 0,
+    'logo_path' => 'public://7sabores-logo-distribucion.png',
+    'default_favicon' => 1,
+    'favicon_path' => '',
+    // Use the IANA-registered MIME type for ICO files as default.
+    'favicon_mimetype' => 'image/vnd.microsoft.icon',
+  ));
+
+  $file_public_path = variable_get('file_public_path', '');
+  if ($file_public_path) {
+    //Copy 7sabores logo to public path
+    $source = drupal_get_path('module', 'plato_tipico') . '/images/7sabores-logo-distribucion.png';
+    $dest = DRUPAL_ROOT . '/' . $file_public_path . '/7sabores-logo-distribucion.png';
+    copy($source, $dest);
+
+    //Copy block background for book promotional
+    $source = drupal_get_path('module', 'plato_tipico') . '/images/7sabores-banner-amazon.png';
+    $dest = DRUPAL_ROOT . '/' . $file_public_path . '/7sabores-banner-amazon.png';
+    copy($source, $dest);
+  }
+
+  //configure language negotiation for interface and content
+
+  variable_set('language_negotiation_language', array
+    (
+    'locale-url' => array
+      (
+      'callbacks' => array
+        (
+        'language' => 'locale_language_from_url',
+        'switcher' => 'locale_language_switcher_url',
+        'url_rewrite' => 'locale_language_url_rewrite_url',
+      ),
+      'file' => 'includes/locale.inc',
+    ),
+    'locale-session' => array
+      (
+      'callbacks' => array
+        (
+        'language' => 'locale_language_from_session',
+        'switcher' => 'locale_language_switcher_session',
+        'url_rewrite' => 'locale_language_url_rewrite_session',
+      ),
+      'file' => 'includes/locale.inc',
+    ),
+    'locale-user' => array
+      (
+      'callbacks' => array
+        (
+        'language' => 'locale_language_from_user',
+      ),
+      'file' => 'includes/locale.inc',
+    ),
+    'locale-browser' => array
+      (
+      'callbacks' => array
+        (
+        'language' => 'locale_language_from_browser'
+      ),
+      'file' => 'includes/locale.inc',
+      'cache' => 0,
+    ),
+    'language-default' => array
+      (
+      'callbacks' => array
+        (
+        'language' => 'language_from_default'
+      ),
+    ),
+  ));
+
+
+  variable_set('language_negotiation_language_content', array
+    (
+    'locale-url' => array
+      (
+      'callbacks' => array
+        (
+        'language' => 'locale_language_from_url',
+        'switcher' => 'locale_language_switcher_url',
+        'url_rewrite' => 'locale_language_url_rewrite_url',
+      ),
+      'file' => 'includes/locale.inc'
+    ),
+    'locale-session' => array
+      (
+      'callbacks' => array
+        (
+        'language' => 'locale_language_from_session',
+        'switcher' => 'locale_language_switcher_session',
+        'url_rewrite' => 'locale_language_url_rewrite_session'
+      ),
+      'file' => 'includes/locale.inc',
+    ),
+    'locale-user' => array
+      (
+      'callbacks' => array
+        (
+        'language' => 'locale_language_from_user',
+      ),
+      'file' => 'includes/locale.inc',
+    ),
+    'locale-browser' => array
+      (
+      'callbacks' => array
+        (
+        'language' => 'locale_language_from_browser',
+      ),
+      'file' => 'includes/locale.inc',
+      'cache' => 0,
+    ),
+    'locale-interface' => array
+      (
+      'callbacks' => array
+        (
+        'language' => 'locale_language_from_interface',
+      ),
+      'file' => 'includes/locale.inc',
+    ),
+    'language-default' => array
+      (
+      'callbacks' => array
+        (
+        'language' => 'language_from_default',
+      )
+    ),
+  ));
+
+  variable_set('language_negotiation_language_url', array
+    (
+    'locale-url' => array
+      (
+      'callbacks' => array
+        (
+        'language' => 'locale_language_from_url',
+        'switcher' => 'locale_language_switcher_url',
+        'url_rewrite' => 'locale_language_url_rewrite_url'
+      ),
+      'file' => 'includes/locale.inc',
+    ),
+    'locale-url-fallback' => array
+      (
+      'callbacks' => array
+        (
+        'language' => 'locale_language_url_fallback',
+      ),
+      'file' => 'includes/locale.inc'
+    ),
+  ));
+
+  //enable filter formats by role
+  /* user_role_change_permissions(1, array('use text format filtered_html' => TRUE));
+    user_role_change_permissions(2, array('use text format filtered_html' => TRUE));
+    user_role_change_permissions(3, array('use text format filtered_html' => TRUE));
+    user_role_change_permissions(3, array('use text format full_html' => TRUE)); */
+
+
+  //Add wysiwyg for full_html format
+  $settings = array(
+    'default' => 1,
+    'user_choose' => 0,
+    'show_toggle' => 1,
+    'theme' => 'advanced',
+    'language' => 'es',
+    'buttons' =>
+    array(
+      'default' =>
+      array(
+        'bold' => 1,
+        'italic' => 1,
+        'underline' => 1,
+        'strikethrough' => 1,
+        'justifyleft' => 1,
+        'justifycenter' => 1,
+        'justifyright' => 1,
+        'bullist' => 1,
+        'numlist' => 1,
+        'outdent' => 1,
+        'indent' => 1,
+        'undo' => 1,
+        'redo' => 1,
+        'link' => 1,
+        'unlink' => 1,
+        'anchor' => 1,
+        'cleanup' => 1,
+        'formatselect' => 1,
+        'cut' => 1,
+        'copy' => 1,
+        'paste' => 1,
+        'removeformat' => 1,
+      ),
+      'advlink' => array(
+        'advlink' => 1,
+      ),
+      'contextmenu' => array(
+        'contextmenu' => 1,
+      ),
+      'inlinepopups' => array(
+        'inlinepopups' => 1,
+      ),
+      'paste' => array(
+        'pastetext' => 1,
+        'pasteword' => 1,
+        'selectall' => 1,
+      ),
+      'searchreplace' => array(
+        'search' => 1,
+        'replace' => 1,
+      ),
+      'table' => array(
+        'tablecontrols' => 1,
+      ),
+      'xhtmlxtras' => array(
+        'del' => 1,
+      ),
+      'advlist' => array(
+        'advlist' => 1,
+      ),
+      'drupal' => array(
+        'break' => 1,
+      ),
+    ),
+    'toolbar_loc' => 'top',
+    'toolbar_align' => 'left',
+    'path_loc' => 'bottom',
+    'resizing' => 1,
+    'verify_html' => 1,
+    'preformatted' => 0,
+    'convert_fonts_to_spans' => 1,
+    'remove_linebreaks' => 1,
+    'apply_source_formatting' => 0,
+    'paste_auto_cleanup_on_paste' => 1,
+    'block_formats' => 'p,address,pre,h2,h3,h4,h5,h6,div',
+    'css_setting' => 'self',
+    'css_path' => '',
+    'css_classes' => '',
+  );
+
+  $fields = array(
+    'format' => 'full_html',
+    'editor' => 'tinymce',
+    'settings' => serialize($settings),
+  );
+
+  db_insert('wysiwyg')->fields($fields)->execute();  
+  //Add wysiwyg for filtered_html format
+  $settings = array(
+    'default' => 1,
+    'user_choose' => 0,
+    'show_toggle' => 1,
+    'theme' => 'advanced',
+    'language' => 'es',
+    'buttons' =>
+    array(
+      'default' =>
+      array(
+        'bold' => 1,
+        'italic' => 1,
+        'underline' => 1,
+        'strikethrough' => 1,
+        'justifyleft' => 1,
+        'justifycenter' => 1,
+        'justifyright' => 1,
+        'bullist' => 1,
+        'numlist' => 1,
+        'outdent' => 1,
+        'indent' => 1,
+        'undo' => 1,
+        'redo' => 1,
+        'link' => 1,
+        'unlink' => 1,
+        'anchor' => 1,
+        'cleanup' => 1,
+        'formatselect' => 1,
+        'cut' => 1,
+        'copy' => 1,
+        'paste' => 1,
+        'removeformat' => 1,
+      ),
+    ),
+    'toolbar_loc' => 'top',
+    'toolbar_align' => 'left',
+    'path_loc' => 'bottom',
+    'resizing' => 1,
+    'verify_html' => 1,
+    'preformatted' => 0,
+    'convert_fonts_to_spans' => 1,
+    'remove_linebreaks' => 1,
+    'apply_source_formatting' => 0,
+    'paste_auto_cleanup_on_paste' => 1,
+    'block_formats' => 'p,address,pre,h2,h3,h4,h5,h6,div',
+    'css_setting' => 'self',
+    'css_path' => '',
+    'css_classes' => '',
+  );
+
+  $fields = array(
+    'format' => 'filtered_html',
+    'editor' => 'tinymce',
+    'settings' => serialize($settings),
+  );
+
+  db_insert('wysiwyg')->fields($fields)->execute();  
+  //Enable l10n frecuency update
+  variable_set('l10n_update_check_frequency', "7");
+
+  theme_enable(array('rubik, tao'));
+  variable_set('admin_theme', 'rubik');
+
+  //Add 7Sabores block
+  // Enable some standard blocks.
+  $default_theme = variable_get('theme_default', 'bartik');
+
+  module_load_include('module', 'fe_block');
+
+  $box = array();
+  $box['info'] = 'Libros 7 Sabores';
+  $box['format'] = 'full_html';
+  $box['machine_name'] = '7sabores_books';
+  $box['body'] = '<a target="_blank" href="http://www.7sabores.com/inicio?qt-videos_para_inicio=2#qt-videos_para_inicio"><img src="' . $base_url . '/sites/default/files/7sabores-banner-amazon.png" title="Libros Aprendizaje Drupal"></a>';
+
+  drupal_write_record('block_custom', $box);
+
+  $blocks = array(
+    array(
+      'module' => 'block',
+      'delta' => $box['bid'],
+      'theme' => $default_theme,
+      'status' => '1',
+      'weight' => '-7',
+      'region' => 'sidebar_first',
+      'custom' => '0',
+      'visibility' => '0',
+      'pages' => '',
+      'title' => '<none>',
+      'cache' => -1,
+    ),
+  );
+
+  $query = db_insert('block')->fields(array('module', 'delta', 'theme', 'status', 'weight', 'region', 'custom', 'visibility', 'pages', 'title', 'cache'));
+  foreach ($blocks as $block) {
+    $query->values($block);
+  }
+  $query->execute();
+
+  //Enable languageicons block
+  $locale_block = array(
+    'module' => 'locale',
+    'delta' => 'language',
+    'theme' => 'bartik',
+    'status' => '1',
+    'weight' => '-8',
+    'region' => 'sidebar_first',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+  );
+  
+  drupal_write_record('block', $locale_block, array('module', 'delta', 'theme'));
+  
+  //Re allocate search from block
+  $search_block = array(
+    'module' => 'search',
+    'delta' => 'form',
+    'theme' => 'bartik',
+    'status' => '1',
+    'weight' => '-1',
+    'region' => 'header',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+  );
+  
+  drupal_write_record('block', $search_block, array('module', 'delta', 'theme'));
+  
+  //rebuild localization update projects
+  l10n_update_build_projects(TRUE);
+}

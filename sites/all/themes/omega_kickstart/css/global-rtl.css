@@ -1,0 +1,769 @@
+/* Include Default Variables & Mixins */
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,800);
+@import url(//fonts.googleapis.com/css?family=Gentium+Basic:400,700);
+/* End Variables & Mixins */
+/**************************************************
+* --
+* - 0. Reset
+* --
+**************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\0000311}}
+ul {
+  margin-right: 10px;
+  margin-left: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\0000314}}
+  ul li {
+    margin-right: 10px;
+    margin-left: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\0000319}}
+h1#page-title {
+  margin-left: 0;
+  margin-right: 10px; }
+
+/* Tweaks for Safari + Chrome. */
+@media (-webkit-min-device-pixel-ratio: 0) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\0000327}}
+  select,
+  select[size] {
+    background-image: url("../images/select-arrow-rtl.gif");
+    background-position: left center;
+    padding-left: 20px;
+    padding-right: 3px; } }
+/* Override addressfield */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\0000335}}
+.addressfield-container-inline > div.form-item {
+  float: right;
+  margin-right: auto;
+  margin-left: 1em; }
+
+/*******************************************
+* 2.1.1. Region user first
+*******************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\0000343}}
+#region-user-first {
+  float: right; }
+
+/* User menu */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\0000348}}
+.block-menu-user-menu .content ul.menu {
+  float: left; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\0000350}}
+  .block-menu-user-menu .content ul.menu li {
+    float: right; }
+
+/*******************************************
+* 2.1.2. Region user second
+*******************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\0000358}}
+#region-user-second {
+  float: left; }
+
+/**
+* Cart block
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\0000364}}
+.block-shopping-cart-block {
+  margin-left: 0 !important;
+  margin-right: 50px !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\0000368}}
+  .block-shopping-cart-block .content {
+    background-position: 99% 48%;
+    float: left;
+    margin-left: 0px;
+    padding-left: 0px;
+    margin-right: -60px;
+    padding-right: 50px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\0000382}}
+    .block-shopping-cart-block .content .view-shopping-cart .view-content,
+    .block-shopping-cart-block .content .view-shopping-cart .view-footer,
+    .block-shopping-cart-block .content .view-shopping-cart .view-empty,
+    .block-shopping-cart-block .content .view-shopping-cart .view-empty p,
+    .block-shopping-cart-block .content .view-shopping-cart .line-item-summary,
+    .block-shopping-cart-block .content .view-shopping-cart .line-item-total,
+    .block-shopping-cart-block .content .view-shopping-cart ul.links {
+      float: right !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\0000385}}
+    .block-shopping-cart-block .content .view-shopping-cart ul.links {
+      float: left !important;
+      margin: 0 5px 0 0px !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\0000389}}
+    .block-shopping-cart-block .content .view-shopping-cart .view-footer {
+      float: none; }
+
+/**********************************************
+* 2.2. Zone branding
+**********************************************/
+/**
+* Search block
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003101}}
+#block-views-exp-display-products-page .views-exposed-widgets {
+  float: left !important;
+  margin-right: 0 !important;
+  margin-left: 10px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003107}}
+#block-views-exp-display-products-page .form-text {
+  padding: 5px 5px 5px 28px !important; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003110}}
+#block-views-exp-display-products-page .views-submit-button {
+  right: auto !important;
+  /* RTL */
+  left: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003113}}
+  #block-views-exp-display-products-page .views-submit-button .form-submit {
+    background-position: 2% 50% !important; }
+
+/**********************************************
+* 2.3. Zone menu
+**********************************************/
+/**
+* Navigation
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003123}}
+.menu-toggle {
+  left: auto;
+  right: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003126}}
+  .menu-toggle .toggle-help {
+    left: auto;
+    right: 45px; }
+
+/**************************************************
+* --
+* 3. Section content
+* --
+**************************************************/
+/**********************************************
+* 3.1. Zone preface
+**********************************************/
+/**
+* Pseudo Breadcrumb
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003143}}
+#region-breadcrumb .pseudo-breadcrumb-total-results {
+  margin: 0 10px 0 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003147}}
+#region-breadcrumb .pseudo-breadcrumb {
+  padding: 10px 5px 35px 21px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003150}}
+  #region-breadcrumb .pseudo-breadcrumb li {
+    display: inline;
+    float: right; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003153}}
+    #region-breadcrumb .pseudo-breadcrumb li a {
+      float: right;
+      margin: 0 0 0 5px; }
+
+/**********************************************
+* 3.2. Zone content
+**********************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003164}}
+.form-item-quantity .ui-corner-tr {
+  -moz-border-radius: 4px 0 0 0;
+  -webkit-border-radius: 4px 0 0 0;
+  -khtml-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003167}}
+.form-item-quantity .ui-corner-br {
+  -moz-border-radius: 0 0 0 4px;
+  -webkit-border-radius: 0 0 0 4px;
+  -khtml-border-radius: 0 0 0 4px;
+  border-radius: 0 0 0 4px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003170}}
+.form-item-quantity .ui-icon-triangle-1-n {
+  background-position: 2px -16px; }
+
+/*******************************************
+* 3.2.1. Sidebar first
+*******************************************/
+/* Search api facet blocks */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003178}}
+.region-sidebar-first .block-facetapi {
+  direction: ltr;
+  text-align: right;
+  margin-right: 15px;
+  margin-left: 0px !important;
+  padding-right: 15px;
+  padding-left: 0px !important; }
+
+/* Price range */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003194}}
+#search-api-ranges-block-slider-view-form .range-box,
+#search-api-ranges-block-slider-view-form label,
+#search-api-ranges-block-slider-view-form #edit-range-from,
+#search-api-ranges-block-slider-view-form #edit-range-to {
+  float: right !important; }
+
+/**********************************************
+* 3.3. Zone postscript
+**********************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003201}}
+.region-postscript-third {
+  margin-left: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003204}}
+.zone-postscript .grid-8 {
+  float: right !important; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003209}}
+#zone-postscript .block-blog-block .block-inner .block-title {
+  background: transparent url("../images/bg_block_homepage_title-rtl.png") 118% 100% no-repeat;
+  padding-right: 25px;
+  padding-left: 0;
+  left: auto;
+  right: -1px;
+  text-align: right; }
+
+/**************************************************
+* --
+* 4. Section footer
+* --
+**************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003224}}
+#zone-footer {
+  direction: ltr; }
+
+/**********************************************
+* 4.1. Zone footer
+**********************************************/
+/**
+* Connect with us
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003234}}
+#block-menu-menu-social-connection h2 {
+  text-align: right; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003239}}
+#block-menu-menu-social-connection .content ul.menu li a {
+  background-position: 98% 50%;
+  padding-left: 0;
+  padding-right: 50px; }
+
+/**********************************************
+* 4.2. Zone footer2
+**********************************************/
+/**
+* Payment blocks
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003255}}
+#block-menu-menu-payment-methods ul.menu li {
+  float: right; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003257}}
+  #block-menu-menu-payment-methods ul.menu li:first-child {
+    padding-left: 0px;
+    padding-right: 10px; }
+
+/**************************************************
+* --
+* 5. Commerce specific
+* --
+**************************************************/
+/**********************************************
+* 5.1. Search & Collection page
+**********************************************/
+/**
+* Collection page
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003277}}
+.view-collection-products .view-header .taxonomy-title,
+.view-collection-taxonomy-term .view-header .taxonomy-title {
+  left: 0 !important;
+  right: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003284}}
+.view-collection-products .view-header .view-collection-products .view-content .item-list,
+.view-collection-products .view-header .collection-terms .view-content .item-list,
+.view-collection-taxonomy-term .view-header .view-collection-products .view-content .item-list,
+.view-collection-taxonomy-term .view-header .collection-terms .view-content .item-list {
+  /* List of categories related to a collection */
+  float: right !important;
+  margin-right: 0 !important;
+  margin-left: 6px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003296}}
+.view-collection-products .view-content .item-list .products-per-collection li.views-row,
+.view-collection-taxonomy-term .view-content .item-list .products-per-collection li.views-row {
+  float: right !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003299}}
+.view-collection-products .view-content .item-list .products-per-collection li.views-row.last,
+.view-collection-taxonomy-term .view-content .item-list .products-per-collection li.views-row.last {
+  padding-left: 0 !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003304}}
+.view-collection-products .view-content .item-list .products-per-collection li .field-name-field-color .vocabulary-color,
+.view-collection-products .view-content .item-list .products-per-collection li .views-field-field-extractor-field-product ul li,
+.view-collection-taxonomy-term .view-content .item-list .products-per-collection li .field-name-field-color .vocabulary-color,
+.view-collection-taxonomy-term .view-content .item-list .products-per-collection li .views-field-field-extractor-field-product ul li {
+  float: right !important;
+  margin: 0 0 0.5em 0.5em; }
+
+/**********************************************
+* 5.2. All products page
+**********************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003315}}
+.page-products .view-display-products li.views-row {
+  float: right !important;
+  padding-right: 0 !important;
+  padding-left: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003319}}
+  .page-products .view-display-products li.views-row.last {
+    padding-left: 0 !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003323}}
+.page-products .view-display-products li:nth-child(3n) {
+  padding-left: 0 !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003326}}
+.page-products .view-display-products li:nth-child(3n+4) {
+  clear: right !important;
+  float: right !important; }
+
+/**
+* Search sort block
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003337}}
+.block-search-api-sorts .block-inner {
+  float: left;
+  clear: left; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003341}}
+  .block-search-api-sorts .block-inner h2.block-title {
+    float: right;
+    margin-right: 0 !important;
+    margin-left: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003347}}
+.block-search-api-sorts .content {
+  float: right; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003350}}
+  .block-search-api-sorts .content ul.search-api-sorts li {
+    float: right;
+    margin-right: 0 !important;
+    margin-left: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003355}}
+    .block-search-api-sorts .content ul.search-api-sorts li span a {
+      right: auto;
+      left: 0;
+      margin-right: 0;
+      margin-left: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003361}}
+    .block-search-api-sorts .content ul.search-api-sorts li .search-api-sort-active {
+      padding-right: 12px;
+      padding-left: 25px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003365}}
+      .block-search-api-sorts .content ul.search-api-sorts li .search-api-sort-active .search-api-sort-remove {
+        float: left;
+        text-indent: -9999px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003376}}
+.page-products .view-display-products li .field-name-field-color .vocabulary-color,
+.page-products .view-display-products li .views-field-field-extractor-field-product ul li {
+  float: right;
+  margin: 0 0 0.5em 0.5em; }
+
+/**********************************************
+* 5.3. Product page
+**********************************************/
+/**
+* Add to cart popin.
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003389}}
+div.messages.commerce-add-to-cart-confirmation .message-inner .added-product-title {
+  padding: 10px 10px 10px 30px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003394}}
+div.messages.commerce-add-to-cart-confirmation .message-inner .view-confirm-message-product-display .view-content {
+  text-align: right; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003399}}
+  div.messages.commerce-add-to-cart-confirmation .message-inner .view-confirm-message-product-display .view-content .views-field-commerce-product .content .field-name-field-images {
+    right: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003401}}
+    div.messages.commerce-add-to-cart-confirmation .message-inner .view-confirm-message-product-display .view-content .views-field-commerce-product .content .field-name-field-images img {
+      text-align: right; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003405}}
+  div.messages.commerce-add-to-cart-confirmation .message-inner .view-confirm-message-product-display .view-content .views-field-commerce-product .content .commerce-product-sku .commerce-product-sku-label {
+    float: right;
+    /* RTL */
+    padding-right: 0;
+    padding-left: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003411}}
+  div.messages.commerce-add-to-cart-confirmation .message-inner .view-confirm-message-product-display .view-content .views-field-commerce-product .content .commerce-product-sku,
+  div.messages.commerce-add-to-cart-confirmation .message-inner .view-confirm-message-product-display .view-content .views-field-commerce-product .content .field {
+    margin-right: 0;
+    margin-left: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003416}}
+  div.messages.commerce-add-to-cart-confirmation .message-inner .view-confirm-message-product-display .view-content .views-field-commerce-product .content .commerce-product-title-label,
+  div.messages.commerce-add-to-cart-confirmation .message-inner .view-confirm-message-product-display .view-content .views-field-commerce-product .content .commerce-product-status-label {
+    float: right;
+    /* RTL */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003422}}
+  div.messages.commerce-add-to-cart-confirmation .message-inner .view-confirm-message-product-display .view-content .views-field-quantity .views-label-quantity {
+    float: right;
+    /* RTL */
+    padding-right: 0;
+    padding-left: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003429}}
+  div.messages.commerce-add-to-cart-confirmation .message-inner .view-confirm-message-product-display .view-content .views-field-commerce-total .views-label-commerce-total {
+    float: right;
+    padding-right: 0;
+    padding-left: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003434}}
+  div.messages.commerce-add-to-cart-confirmation .message-inner .view-confirm-message-product-display .view-content .views-field-commerce-total .field-content {
+    float: left; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003438}}
+  div.messages.commerce-add-to-cart-confirmation .message-inner .view-confirm-message-product-display .view-content .field-label {
+    padding-right: 0;
+    padding-left: 5px;
+    float: right; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003445}}
+div.messages.commerce-add-to-cart-confirmation .message-inner .commerce-add-to-cart-confirmation-close {
+  right: auto;
+  left: 15px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003450}}
+div.messages.commerce-add-to-cart-confirmation .views-field-title {
+  text-align: right; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003458}}
+.node-product-type .field-name-body .read-more a,
+.node-product-type .field-name-body .read-less a {
+  background-position: right top;
+  padding-right: 0;
+  padding-left: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003469}}
+.node-product-type .field-type-commerce-product-reference form.commerce-add-to-cart .attribute-widgets .form-item div#edit-attributes-field-color {
+  float: right; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003474}}
+.node-product-type .field-type-commerce-product-reference form.commerce-add-to-cart .attribute-widgets .form-item-attributes-field-color .form-item.form-item-attributes-field-color {
+  float: right;
+  margin-right: 0;
+  margin-left: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003481}}
+.node-product-type .field-type-commerce-product-reference form.commerce-add-to-cart label {
+  float: right;
+  margin-right: 0;
+  margin-left: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003486}}
+.node-product-type .field-type-commerce-product-reference form.commerce-add-to-cart .form-submit {
+  background-position: 10% 50%;
+  margin-right: 5px;
+  margin-left: 0;
+  padding: 5px 10px 5px 50px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003496}}
+.service-links {
+  float: left; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003499}}
+  .service-links ul li {
+    float: right; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003501}}
+    .service-links ul li:first {
+      margin-right: 0;
+      margin-left: inherit; }
+
+/**********************************************
+* 5.4. Checkout process
+**********************************************/
+/**
+* Checkout progress
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003514}}
+ul.inline.commerce-checkout-progress,
+ol.inline.commerce-checkout-progress {
+  margin-left: 10px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003516}}
+  ul.inline.commerce-checkout-progress li,
+  ol.inline.commerce-checkout-progress li {
+    float: right;
+    /* RTL */
+    padding: 15px 35px 15px 15px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003519}}
+    ul.inline.commerce-checkout-progress li:after,
+    ol.inline.commerce-checkout-progress li:after {
+      background: transparent url("../images/bg_checkout_progress-rtl.png") left center no-repeat;
+      float: left;
+      right: auto;
+      left: -25px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003525}}
+    ul.inline.commerce-checkout-progress li.last:after,
+    ol.inline.commerce-checkout-progress li.last:after {
+      background: #efefef url("../images/bg_checkout_progress_last-rtl.png") left center no-repeat; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003530}}
+    ul.inline.commerce-checkout-progress li.active:after, ul.inline.commerce-checkout-progress li.last.active:after,
+    ol.inline.commerce-checkout-progress li.active:after,
+    ol.inline.commerce-checkout-progress li.last.active:after {
+      background: transparent url("../images/bg_checkout_progress_active-rtl.png") left center no-repeat; }
+
+/**
+* Shopping cart page
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003545}}
+#views-form-commerce-cart-form-default table th,
+#commerce-checkout-form-checkout .view-commerce-cart-summary table th,
+#commerce-checkout-form-review .view-commerce-cart-summary table th,
+.page-user-orders .view-commerce-line-item-table table th,
+.view-commerce-backoffice-user-orders table th {
+  text-align: right; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003551}}
+#views-form-commerce-cart-form-default table td.views-field-nothing .commerce-product-sku-label,
+#views-form-commerce-cart-form-default table td.views-field-nothing .commerce-product-status-label,
+#commerce-checkout-form-checkout .view-commerce-cart-summary table td.views-field-nothing .commerce-product-sku-label,
+#commerce-checkout-form-checkout .view-commerce-cart-summary table td.views-field-nothing .commerce-product-status-label,
+#commerce-checkout-form-review .view-commerce-cart-summary table td.views-field-nothing .commerce-product-sku-label,
+#commerce-checkout-form-review .view-commerce-cart-summary table td.views-field-nothing .commerce-product-status-label,
+.page-user-orders .view-commerce-line-item-table table td.views-field-nothing .commerce-product-sku-label,
+.page-user-orders .view-commerce-line-item-table table td.views-field-nothing .commerce-product-status-label,
+.view-commerce-backoffice-user-orders table td.views-field-nothing .commerce-product-sku-label,
+.view-commerce-backoffice-user-orders table td.views-field-nothing .commerce-product-status-label {
+  float: right;
+  /* RTL */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003557}}
+#views-form-commerce-cart-form-default table .views-field-edit-delete,
+#views-form-commerce-cart-form-default table .views-field-commerce-total,
+#commerce-checkout-form-checkout .view-commerce-cart-summary table .views-field-edit-delete,
+#commerce-checkout-form-checkout .view-commerce-cart-summary table .views-field-commerce-total,
+#commerce-checkout-form-review .view-commerce-cart-summary table .views-field-edit-delete,
+#commerce-checkout-form-review .view-commerce-cart-summary table .views-field-commerce-total,
+.page-user-orders .view-commerce-line-item-table table .views-field-edit-delete,
+.page-user-orders .view-commerce-line-item-table table .views-field-commerce-total,
+.view-commerce-backoffice-user-orders table .views-field-edit-delete,
+.view-commerce-backoffice-user-orders table .views-field-commerce-total {
+  text-align: left; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003563}}
+.page-user-orders .view-commerce-line-item-table table td {
+  direction: ltr;
+  /* RTL */
+  text-align: right;
+  /* RTL */ }
+
+/* Order total table */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003569}}
+.field-name-commerce-order-total .field-items {
+  float: left; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003574}}
+  .field-name-commerce-order-total .field-items table.commerce-price-formatted-components td.component-title {
+    text-align: right; }
+
+/* Checkout button */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003589}}
+.page-checkout #commerce-checkout-form-checkout .checkout-buttons input#edit-cancel,
+.page-checkout #commerce-checkout-form-checkout .checkout-buttons input#edit-back,
+.page-checkout #commerce-checkout-form-shipping .checkout-buttons input#edit-cancel,
+.page-checkout #commerce-checkout-form-shipping .checkout-buttons input#edit-back,
+.page-checkout #commerce-checkout-form-review .checkout-buttons input#edit-cancel,
+.page-checkout #commerce-checkout-form-review .checkout-buttons input#edit-back {
+  margin: 0 5px 0 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003592}}
+.page-checkout #commerce-checkout-form-checkout .checkout-buttons input#edit-continue,
+.page-checkout #commerce-checkout-form-shipping .checkout-buttons input#edit-continue,
+.page-checkout #commerce-checkout-form-review .checkout-buttons input#edit-continue {
+  margin: 0 0 0 10px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003599}}
+.page-cart #views-form-commerce-cart-form-default {
+  /* Button styling */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003602}}
+  .page-cart #views-form-commerce-cart-form-default .commerce-line-item-actions input#edit-submit {
+    margin-right: 0;
+    margin-left: 20px; }
+
+/**
+* Checkout page
+* Review order page
+* Checkout complete page
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003614}}
+.page-checkout .checkout-help {
+  margin: 0 10px 10px 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003623}}
+.page-checkout #commerce-checkout-form-checkout fieldset.customer_profile_billing .locality-block .form-item, .page-checkout #commerce-checkout-form-checkout fieldset.customer_profile_shipping .locality-block .form-item,
+.page-checkout #commerce-checkout-form-review fieldset.customer_profile_billing .locality-block .form-item,
+.page-checkout #commerce-checkout-form-review fieldset.customer_profile_shipping .locality-block .form-item {
+  float: right; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003626}}
+  .page-checkout #commerce-checkout-form-checkout fieldset.customer_profile_billing .locality-block .form-item label, .page-checkout #commerce-checkout-form-checkout fieldset.customer_profile_shipping .locality-block .form-item label,
+  .page-checkout #commerce-checkout-form-review fieldset.customer_profile_billing .locality-block .form-item label,
+  .page-checkout #commerce-checkout-form-review fieldset.customer_profile_shipping .locality-block .form-item label {
+    float: none !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003633}}
+.page-checkout #commerce-checkout-form-checkout fieldset legend span,
+.page-checkout #commerce-checkout-form-review fieldset legend span {
+  padding-right: 10px;
+  padding-left: 0; }
+
+/**
+* Shipping page
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003644}}
+.page-checkout-shipping .form-item-commerce-shipping-shipping-service {
+  clear: right;
+  float: right; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003648}}
+  .page-checkout-shipping .form-item-commerce-shipping-shipping-service label {
+    padding: 0 10px 0 0; }
+
+/**
+* Review order page
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003657}}
+.page-checkout-review #commerce-checkout-form-review {
+  /* Payment information */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003658}}
+  .page-checkout-review #commerce-checkout-form-review .checkout-help {
+    margin: 0 10px 10px 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003663}}
+  .page-checkout-review #commerce-checkout-form-review fieldset.commerce_payment .fieldset-wrapper label {
+    float: none !important; }
+
+/* Page user review order */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003673}}
+.page-user-orders .field-name-commerce-customer-billing,
+.page-user-orders .field-name-commerce-customer-shipping {
+  float: right;
+  margin: 5px 0 0 3%; }
+
+/* Order history */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003681}}
+.view-commerce-backoffice-order-messages th {
+  text-align: right; }
+
+/* Comment form */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003692}}
+#commerce-backoffice-order-message-form fieldset .fieldset-wrapper .form-item label {
+  float: right;
+  padding-right: 0;
+  padding-left: 8px;
+  text-align: left; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003699}}
+#commerce-backoffice-order-message-form fieldset .fieldset-wrapper .form-textarea-wrapper {
+  float: right; }
+
+/**************************************************
+* --
+* 7. Blog
+* --
+**************************************************/
+/**************************************************
+* --
+* 8. Comments
+* --
+**************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003716}}
+article.comment header em {
+  float: left; }
+
+/* Comment form */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003724}}
+.comment-form .form-item {
+  clear: right; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003726}}
+  .comment-form .form-item label {
+    float: right;
+    padding-right: 0;
+    padding-left: 8px;
+    text-align: left; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003731}}
+    .comment-form .form-item label:after {
+      clear: both;
+      content: ":"; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003737}}
+  .comment-form .form-item .form-radios,
+  .comment-form .form-item .form-checkboxes {
+    float: right !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003739}}
+    .comment-form .form-item .form-radios label,
+    .comment-form .form-item .form-checkboxes label {
+      float: inherit;
+      text-align: inherit;
+      width: auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003746}}
+.comment-form .form-textarea-wrapper {
+  float: right; }
+
+/* Comment links */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003751}}
+.links.node-links {
+  float: left;
+  margin-right: 0px;
+  margin-left: 15px; }
+
+/**************************************************
+* --
+* 9. User account
+* --
+**************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003762}}
+.page-user,
+.page-checkout {
+  /* Registration form */
+  /* Password form */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003767}}
+  .page-user form#user-register-form .password-suggestions ul,
+  .page-user form#user-profile-form .password-suggestions ul,
+  .page-checkout form#user-register-form .password-suggestions ul,
+  .page-checkout form#user-profile-form .password-suggestions ul {
+    margin-right: 20px;
+    margin-left: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003774}}
+  .page-user form#user-register-form .form-actions .form-submit,
+  .page-user form#user-profile-form .form-actions .form-submit,
+  .page-checkout form#user-register-form .form-actions .form-submit,
+  .page-checkout form#user-profile-form .form-actions .form-submit {
+    float: right; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003777}}
+  .page-user form#user-register-form .form-actions .back-to-login,
+  .page-user form#user-profile-form .form-actions .back-to-login,
+  .page-checkout form#user-register-form .form-actions .back-to-login,
+  .page-checkout form#user-profile-form .form-actions .back-to-login {
+    float: left; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003779}}
+    .page-user form#user-register-form .form-actions .back-to-login .login-account,
+    .page-user form#user-profile-form .form-actions .back-to-login .login-account,
+    .page-checkout form#user-register-form .form-actions .back-to-login .login-account,
+    .page-checkout form#user-profile-form .form-actions .back-to-login .login-account {
+      float: right; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003787}}
+  .page-user form#user-pass .form-actions,
+  .page-checkout form#user-pass .form-actions {
+    float: right;
+    margin-right: 0;
+    margin-left: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003792}}
+  .page-user form#user-pass .back-to-login,
+  .page-checkout form#user-pass .back-to-login {
+    float: left; }
+
+/* User home */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003803}}
+.page-user .profile ul.user-information li {
+  float: right; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003807}}
+.page-user .profile ul.user-recent-orders {
+  list-style: none;
+  list-style-image: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003811}}
+  .page-user .profile ul.user-recent-orders li {
+    list-style: none;
+    list-style-image: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003818}}
+.page-user .tabs ul {
+  /* User primary menu/tabs */
+  /* User secondary menu/tabs */ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003821}}
+  .page-user .tabs ul.primary li {
+    float: right; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003828}}
+  .page-user .tabs ul.secondary li {
+    border-right: auto;
+    border-left: 0 transparent;
+    float: right; }
+
+/* Address book */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003839}}
+.page-user-addressbook .view-commerce-addressbook-defaults .views-field {
+  float: right;
+  margin: 0 0 20px 15px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003845}}
+.page-user-addressbook .view-commerce-addressbook td .views-field {
+  margin: 0 0 15px 15px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/global-rtl\.scss}line{font-family:\00003848}}
+  .page-user-addressbook .view-commerce-addressbook td .views-field .ajax-progress-throbber {
+    /* Positions the throbber */
+    position: absolute;
+    right: auto;
+    left: 0; }

@@ -1,0 +1,125 @@
+name = "Plato Típico."
+description = "Instalación optimizada multi-idioma y con los módulos comúnmente usados."
+exclusive = "1"
+core = "7.x"
+; ----------
+; Dependencies
+; ----------
+; Core
+dependencies[] = block
+dependencies[] = comment
+dependencies[] = contextual
+dependencies[] = dashboard
+dependencies[] = help
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = taxonomy
+dependencies[] = dblog
+dependencies[] = search
+dependencies[] = shortcut
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = rdf
+
+dependencies[] = field
+dependencies[] = field_sql_storage
+dependencies[] = filter
+dependencies[] = locale
+dependencies[] = node
+dependencies[] = system
+dependencies[] = text
+dependencies[] = user
+dependencies[] = blog
+dependencies[] = contact
+
+; Variable
+dependencies[] = variable
+dependencies[] = variable_realm
+dependencies[] = variable_store
+
+; Chaos tool suite
+dependencies[] = ctools
+
+; Views
+dependencies[] = views
+dependencies[] = views_ui
+
+
+; Multilingual - Entity Translation
+dependencies[] = entity_translation
+
+; Multilingual - Internationalization
+dependencies[] = i18n
+dependencies[] = languageicons
+dependencies[] = l10n_update
+dependencies[] = l10n_client
+dependencies[] = i18n_block
+dependencies[] = i18n_field
+dependencies[] = i18n_menu
+dependencies[] = i18n_node
+dependencies[] = i18n_path
+dependencies[] = i18n_select
+dependencies[] = i18n_string
+dependencies[] = i18n_sync
+dependencies[] = i18n_taxonomy
+dependencies[] = i18n_translation
+dependencies[] = i18n_variable
+
+
+; Other
+dependencies[] = admin_menu
+dependencies[] = admin_menu_toolbar
+dependencies[] = coffee
+dependencies[] = entity
+dependencies[] = entity_token
+dependencies[] = module_filter
+dependencies[] = libraries
+dependencies[] = context
+dependencies[] = context_ui
+dependencies[] = googleanalytics
+dependencies[] = masquerade
+dependencies[] = metatag
+dependencies[] = metatag_ui
+dependencies[] = metatag_opengraph
+dependencies[] = pathauto
+dependencies[] = pathologic
+dependencies[] = globalredirect
+dependencies[] = token
+dependencies[] = transliteration
+dependencies[] = wysiwyg
+dependencies[] = advanced_help
+dependencies[] = print
+dependencies[] = xmlsitemap
+dependencies[] = elysia_cron
+dependencies[] = security_review
+dependencies[] = link
+dependencies[] = phone
+dependencies[] = email
+
+; Responsive Modules
+dependencies[] = modernizr
+dependencies[] = picture
+dependencies[] = retina_images
+dependencies[] = flexslider
+dependencies[] = resp_img
+dependencies[] = cs_adaptive_image
+dependencies[] = fitvids
+;dependencies[] = vef_picture
+dependencies[] = breakpoints
+dependencies[] = context_breakpoint
+dependencies[] = oa_responsive_regions
+dependencies[] = flexslider_picture
+dependencies[] = flexslider_views
+dependencies[] = flexslider_fields
+dependencies[] = flexslider
+
+; Information added by Drupal.org packaging script on 2014-04-30
+version = "7.x-4.1"
+core = "7.x"
+project = "plato_tipico"
+datestamp = "1398818028"
+
