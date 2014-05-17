@@ -1,0 +1,8 @@
+filename = "PortalHolstic-2014-05-17T11-50-23"
+description = ""
+datestamp = "1400320224"
+generator = "Backup and Migrate (http://drupal.org/project/backup_migrate)"
+generatorversion = "7.x-2.x"
+sites[0][version] = "7.27"
+sites[0][name] = "Portal Holístic"
+sites[0][url] = "http://holos.pantheon.localhost/es"
