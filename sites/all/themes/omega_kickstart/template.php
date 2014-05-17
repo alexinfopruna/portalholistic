@@ -25,8 +25,8 @@ function omega_kickstart_preprocess_html(&$variables) {
 
   
   /* ALEX BAMBOO */
-  drupal_add_css('//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700',array('type' => 'external'));
-  drupal_add_css('//fonts.googleapis.com/css?family=Rosarivo:400,400italic&subset=latin,latin-ext',array('type' => 'external'));
+  drupal_add_css('http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700',array('type' => 'external'));
+  drupal_add_css('http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic',array('type' => 'external'));
    // Compile a list of classes that are going to be applied to the body element.
   // This allows advanced theming based on context (home page, node of certain type, etc.).
    $variables["attributes_array"]["class"][] = "body-font-sans-serif";// For Omega based themes

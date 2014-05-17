@@ -1,77 +1,98 @@
 @import url(//fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,800);
 @import url(//fonts.googleapis.com/css?family=Gentium+Basic:400,700);
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/holos\.scss}line{font-family:\000034}}
-.menu li {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/holos\.scss}line{font-family:\000036}}
+#zone-preface .menu li, #zone-user .menu li {
   float: left;
   list-style-type: none !important;
   list-style-image: none !important; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/holos\.scss}line{font-family:\0000314}}
+#zone-preface .menu > li, #zone-user .menu > li {
+  float: left;
+  list-style-type: none;
+  padding: 5px;
+  font-size: 1.2em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/holos\.scss}line{font-family:\0000319}}
+  #zone-preface .menu > li a, #zone-user .menu > li a {
+    color: black;
+    padding: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/holos\.scss}line{font-family:\0000320}}
+  #zone-preface .menu > li a:hover, #zone-user .menu > li a:hover {
+    background-color: #DDD;
+    padding: 5px;
+    /*text-decoration:underline;*/ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/holos\.scss}line{font-family:\0000326}}
+  #zone-preface .menu > li .active-trail, #zone-user .menu > li .active-trail {
+    background-color: black;
+    color: white;
+    padding: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/holos\.scss}line{font-family:\0000330}}
+  #zone-preface .menu > li .active-trail:hover, #zone-user .menu > li .active-trail:hover {
+    background-color: black;
+    color: white;
+    padding: 5px; }
 
-/*  
-   .menu
- {
-    display: block;
-    font-size: 1em;
-    margin: 0 10px;
-    padding: 10px 0 0 0;
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/holos\.scss}line{font-family:\0000341}}
+.section-footer ul.menu li.expanded ul.menu li a.active {
+  color: #999; }
 
-    ul {
-      margin: 0;
-      li {
-        display: inline-block;
-        margin: 0 0 7px 0;
-        padding: 0;
-        width: 100%;
-        a {
-          display: block;
-          font-family: $headerfont;
-          font-weight: 600;
-          padding: 12px 16px;
-          text-decoration: none;
-          &:hover {
-            text-decoration: none;
-          }
-        }
-      }
-    }
-  }*/
-  /* Main menu 
-  .menu ul li {
-    a {
-      background-color: $mainmenuitembg;
-      border: $mainmenuitemborder;
-      color: $mainmenulinkcolor;
-      text-transform: capitalize;
-
-      &.active,
-      &:hover {
-        background-color: $mainmenuitembghover;
-        border: $mainmenuitemborderhover;
-      }
-      &.active {
-        color: $mainmenuitemfontactive;
-      }
-      &:hover {
-        color: $mainmenuitemfonthover;
-      }
-    }
-  }
-
-*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/holos\.scss}line{font-family:\0000361}}
+/*.sf-menu li{padding:0;font-size:1em;}*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/holos\.scss}line{font-family:\0000347}}
 .zone-footer2-wrapper {
   background-color: #363636; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/holos\.scss}line{font-family:\0000366}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/holos\.scss}line{font-family:\0000352}}
 .banner-ar {
-  margin-bottom: 10px;
+  margin-top: 10px;
   border: black solid 1px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/holos\.scss}line{font-family:\0000370}}
+/*
 .zone-user-wrapper {
-  position: relative !important;
-  z-index: 200; }
+    position: relative !important;
+    z-index: 200;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/holos\.scss}line{font-family:\0000375}}
-.menu li {
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/holos\.scss}line{font-family:\0000363}}
+div {
+  z-index: 2; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/holos\.scss}line{font-family:\0000368}}
+.block-locale-language {
   float: left;
-  list-style-type: none; }
+  margin-right: 25px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/holos\.scss}line{font-family:\0000372}}
+  .block-locale-language ul {
+    margin-bottom: 8px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/holos\.scss}line{font-family:\0000381}}
+#zone-user a {
+  color: white; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/holos\.scss}line{font-family:\0000382}}
+#zone-user a:hover {
+  color: #CCC;
+  /*text-decoration:underline;*/ }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/holos\.scss}line{font-family:\0000385}}
+#zone-user .active a {
+  background-color: black;
+  color: white;
+  padding: 5px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/holos\.scss}line{font-family:\0000392}}
+.site-name a {
+  color: black; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/holos\.scss}line{font-family:\0000394}}
+#zone-user-wrapper {
+  height: 34px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/holos\.scss}line{font-family:\0000396}}
+.breadcrumb {
+  margin: 0 0 8px 0;
+  padding: 5px 17px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/holos\.scss}line{font-family:\00003101}}
+.zone-branding .region-branding {
+  margin: 45px 0 0px 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/holos\.scss}line{font-family:\00003102}}
+  .zone-branding .region-branding .logo-img {
+    margin: 0; }

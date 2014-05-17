@@ -7,14 +7,15 @@ http://ie.microsoft.com/testdrive/graphics/cssgradientbackgroundmaker/default.ht
 */
 
 body.body-font-sans-serif {
-  font-family: 'Open Sans', sans-serif;
+  /*font-family: 'Open Sans Condensed', Arial, sans-serif;*/
+  font-family: 'Open Sans', Arial, sans-serif;
   font-size: 100.01%/1.5;
   font-weight: 400;
 }
 
 body.body-font-sans-serif p,
 body.body-font-sans-serif li {
-  line-height: 1.5em;
+  /*line-height: 1.5em;*/
 }
 
 body.body-font-serif {

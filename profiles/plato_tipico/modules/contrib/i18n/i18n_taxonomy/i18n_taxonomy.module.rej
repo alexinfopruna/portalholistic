@@ -1,0 +1,63 @@
+--- i18n_taxonomy.module.orig	Tue Oct 25 15:54:12 2011
++++ i18n_taxonomy.module	Wed Nov 23 12:51:21 2011
+@@ -280,8 +280,23 @@
+ }
+ 
+ /**
++ * Implements hook_field_storage_details_alter().
++ *
++ * We don't alter the storage details but the stored details of the field itself...
++ *
++ * @param array $field
++ *   The field record just read from the database.
++ */
++function i18n_taxonomy_field_storage_details_alter($details, &$field, $instance) {
++  if ($field['type'] === 'taxonomy_term_reference') {
++    // We also take over existing taxonomy_term_reference fields.
++    $field['module'] = 'i18n_taxonomy';
++  }
++}
++
++/**
+  * Implements hook_field_prepare_translation().
+- * 
++ *
+  * Prepare and synchronize translation for term reference fields
+  */
+ function i18n_taxonomy_field_prepare_translation($entity_type, $entity, $field, $instance, $langcode, &$items, $source_entity, $source_langcode) {
+@@ -451,7 +466,7 @@
+ 
+ /**
+  * Find term translation from translation set.
+- * 
++ *
+  * @param $term
+  *   Term object to find translation.
+  * @param $langcode
+@@ -531,7 +546,7 @@
+ }
+ 
+ /**
+- * Implements hook_taxonomy_display_breadcrumb_parents_alter(). 
++ * Implements hook_taxonomy_display_breadcrumb_parents_alter().
+  */
+ function i18n_taxonomy_taxonomy_display_breadcrumb_parents_alter(&$parents) {
+   $parents = i18n_taxonomy_localize_terms($parents);
+@@ -554,7 +569,7 @@
+ /**
+  * Implements hook_taxonomy_term_update()
+  */
+-function i18n_taxonomy_taxonomy_term_update($term) {  
++function i18n_taxonomy_taxonomy_term_update($term) {
+   if (i18n_taxonomy_vocabulary_mode($term->vid, I18N_MODE_LOCALIZE)) {
+     i18n_string_object_update('taxonomy_term', $term);
+   }
+@@ -741,7 +756,7 @@
+       }
+       elseif (i18n_object_langcode($term) && !empty($term->i18n_tsid)) {
+         // If the current term is part of a translation set,
+-        // remove all other languages of the option list.        
++        // remove all other languages of the option list.
+         $translation_set = i18n_taxonomy_translation_set_load($term->i18n_tsid);
+         $translations = $translation_set->get_translations();
+ 

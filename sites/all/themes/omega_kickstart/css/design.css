@@ -6,27 +6,28 @@ http://ie.microsoft.com/testdrive/graphics/cssgradientbackgroundmaker/default.ht
 */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\000039}}
 body.body-font-sans-serif {
-  font-family: 'Open Sans', sans-serif;
+  /*font-family: 'Open Sans Condensed', Arial, sans-serif;*/
+  font-family: 'Open Sans', Arial, sans-serif;
   font-size: 100.01%/1.5;
   font-weight: 400; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\0000316}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\0000317}}
 body.body-font-sans-serif p,
 body.body-font-sans-serif li {
-  line-height: 1.5em; }
+  /*line-height: 1.5em;*/ }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\0000321}}
 body.body-font-serif {
   font-family: 'Rosarivo', serif;
   font-size: 102%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\0000326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\0000327}}
 body.body-font-serif p,
 body.body-font-serif li {
   font-size: .86em;
   line-height: 1.5em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\0000332}}
 a {
   color: #8ea61f;
   -webkit-transition: color .2s ease-in-out;
@@ -36,13 +37,13 @@ a {
   text-decoration: none;
   transition: color .2s ease-in-out; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\0000342}}
 a:hover {
   color: #d54e21;
   text-decoration: none; }
 
 /* Typography */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\0000352}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\0000353}}
 .header-font-sans-serif h1,
 .header-font-sans-serif h2,
 .header-font-sans-serif h3,
@@ -51,7 +52,7 @@ a:hover {
 .header-font-sans-serif h6 {
   font-family: 'Open Sans', sans-serif; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\0000362}}
 .header-font-serif h1,
 .header-font-serif h2,
 .header-font-serif h3,
@@ -61,60 +62,60 @@ a:hover {
   font-family: 'Rosarivo', serif; }
 
 /* Defaults */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\0000367}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\0000368}}
 .menu-navigation-container li a {
   text-transform: uppercase; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\0000371}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\0000372}}
 .menu-navigation-container li li a {
   text-transform: capitalize; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\0000375}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\0000376}}
 body.body-font-serif .menu-navigation-container ul.menu li a {
   letter-spacing: .14em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\0000381}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\0000382}}
 #main-menu li li a,
 #main-menu li li a:link,
 #main-menu li li a:visited {
   background-color: #152d43;
   letter-spacing: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\0000386}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\0000387}}
 .date-in-parts {
   background: #8ea61f; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\0000390}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\0000391}}
 .sidebar .block > h2 {
   background: #8ea61f;
   box-shadow: -2px 2px 11px rgba(50, 50, 50, 0.41);
   -webkit-box-shadow: -2px 2px 11px rgba(50, 50, 50, 0.41);
   -moz-box-shadow: -2px 2px 11px rgba(50, 50, 50, 0.41); }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\0000397}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\0000398}}
 #bottom {
   background: #4e4554; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003101}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003102}}
 #copyright {
   background: #3e3742; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003105}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003106}}
 .form-submit {
   background-color: #ccc;
   color: #333; }
 
 /* Color Palettes*/
 /* Green Bamboo */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003113}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003114}}
 .color-palette-green-bamboo a {
   color: #8ea61f; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003117}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003118}}
 .color-palette-green-bamboo a:hover {
   color: #667; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003126}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003127}}
 .color-palette-green-bamboo #preface-wrapper .block h2,
 .color-palette-green-bamboo .sidebar .block h2,
 .color-palette-green-bamboo .date-in-parts,
@@ -136,7 +137,7 @@ body.body-font-serif .menu-navigation-container ul.menu li a {
   background-image: linear-gradient(to top, #a6bb47 0%, #7e8e34 100%);
   color: #eaeaea; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003148}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003149}}
 .color-palette-green-bamboo h1,
 .color-palette-green-bamboo h2,
 .color-palette-green-bamboo h3,
@@ -145,57 +146,57 @@ body.body-font-serif .menu-navigation-container ul.menu li a {
 .color-palette-green-bamboo h6 {
   color: #8ea61f; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003153}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003154}}
 .color-palette-green-bamboo pre,
 .color-palette-green-bamboo code {
   background: #d2df95; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003157}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003158}}
 .color-palette-green-bamboo .comment.odd {
   background: #d6ddb3; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003161}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003162}}
 .color-palette-green-bamboo .comment.even {
   background: #d8dbc9; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003165}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003166}}
 .color-palette-green-bamboo .comment .submitted {
   color: #899a39; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003169}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003170}}
 .color-palette-green-bamboo .comment .submitted a {
   border-bottom: 1px dotted #333;
   color: #667; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003174}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003175}}
 .color-palette-green-bamboo input[type="submit"] {
   color: #fff; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003180}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003181}}
 .color-palette-green-bamboo input[type="submit"]:hover,
 .color-palette-green-bamboo input[type="reset"]:hover,
 .color-palette-green-bamboo button:hover {
   background: #999;
   cursor: pointer; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003185}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003186}}
 .color-palette-green-bamboo nav#main-menu ul li li a {
   background: #899b39; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003189}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003190}}
 .color-palette-green-bamboo nav#main-menu ul li li a:hover {
   background: #999; }
 
 /* Dark Rust */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003194}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003195}}
 .color-palette-dark-rust a {
   color: #b54617; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003198}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003199}}
 .color-palette-dark-rust a:hover {
   color: #667; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003208}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003209}}
 .color-palette-dark-rust #preface-wrapper .block h2,
 .color-palette-dark-rust .sidebar .block h2,
 .color-palette-dark-rust .date-in-parts,
@@ -218,7 +219,7 @@ body.body-font-serif .menu-navigation-container ul.menu li a {
   background-image: linear-gradient(to top, #ce4c14 0%, #a7461c 100%);
   color: #eaeaea; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003230}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003231}}
 .color-palette-dark-rust h1,
 .color-palette-dark-rust h2,
 .color-palette-dark-rust h3,
@@ -227,50 +228,50 @@ body.body-font-serif .menu-navigation-container ul.menu li a {
 .color-palette-dark-rust h6 {
   color: #b54617; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003235}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003236}}
 .color-palette-dark-rust pre,
 .color-palette-dark-rust code {
   background: #b54617;
   color: #eaeaea; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003240}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003241}}
 .color-palette-dark-rust .comment.odd {
   background: #d9bc9b; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003244}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003245}}
 .color-palette-dark-rust .comment.even {
   background: #cac1b6; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003249}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003250}}
 .color-palette-dark-rust blockquote,
 .color-palette-dark-rust q {
   background: #dedede url("../images/quote-turq.png") no-repeat; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003255}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003256}}
 .color-palette-dark-rust input[type="submit"]:hover,
 .color-palette-dark-rust input[type="reset"]:hover,
 .color-palette-dark-rust button:hover {
   background: #999;
   cursor: pointer; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003260}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003261}}
 .color-palette-dark-rust nav#main-menu ul li li a {
   background: #b74819; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003264}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003265}}
 .color-palette-dark-rust nav#main-menu ul li li a:hover {
   background: #999; }
 
 /* Warm Purple */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003269}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003270}}
 .color-palette-warm-purple a {
   color: #626584; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003273}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003274}}
 .color-palette-warm-purple a:hover {
   color: #667; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003283}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003284}}
 .color-palette-warm-purple #preface-wrapper .block h2,
 .color-palette-warm-purple .sidebar .block h2,
 .color-palette-warm-purple .date-in-parts,
@@ -287,7 +288,7 @@ button {
   background-image: linear-gradient(to bottom, #626584 0%, #494c62 100%);
   color: #eaeaea; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003299}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003300}}
 .color-palette-warm-purple h1,
 .color-palette-warm-purple h2,
 .color-palette-warm-purple h3,
@@ -296,42 +297,42 @@ button {
 .color-palette-warm-purple h6 {
   color: #626584; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003304}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003305}}
 .color-palette-warm-purple pre,
 .color-palette-warm-purple code {
   background: #7e76a3;
   color: #fff; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003309}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003310}}
 .color-palette-warm-purple .comment.odd {
   background: #cecdd2; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003313}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003314}}
 .color-palette-warm-purple .comment.even {
   background: #e0dee8; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003319}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003320}}
 .color-palette-warm-purple input[type="submit"]:hover,
 .color-palette-warm-purple input[type="reset"]:hover,
 .color-palette-warm-purple button:hover {
   background: #999;
   cursor: pointer; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003325}}
 .color-palette-warm-purple nav#main-menu ul li li a {
   background: #4d5067; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003329}}
 .color-palette-warm-purple nav#main-menu ul li li a:hover {
   background: #999; }
 
 /* End color palettes */
 /* Backgrounds */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003337}}
 body.bg-dark-linen {
   background: url("../images/bg-dark-linen.png") repeat fixed; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003340}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003341}}
 body.bg-gray-gradient {
   background: url("../images/blank-bg.gif") repeat fixed;
   background-image: -ms-linear-gradient(bottom, #e8e8e8 0%, #bababa 100%);
@@ -341,7 +342,7 @@ body.bg-gray-gradient {
   background-image: -webkit-linear-gradient(bottom, #e8e8e8 0%, #bababa 100%);
   background-image: linear-gradient(to top, #e8e8e8 0%, #bababa 100%); }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003351}}
 body.bg-green-gradient {
   background: url("../images/blank-bg.gif") repeat fixed;
   background-image: -ms-linear-gradient(top, #afbb7a 0%, #dbe9b6 100%);
@@ -351,7 +352,7 @@ body.bg-green-gradient {
   background-image: -webkit-linear-gradient(top, #afbb7a 0%, #dbe9b6 100%);
   background-image: linear-gradient(to bottom, #afbb7a 0%, #dbe9b6 100%); }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003361}}
 body.bg-purple-gradient {
   background: url("../images/blank-bg.gif") repeat fixed;
   background-image: -ms-linear-gradient(top, #626584 0%, #494c62 100%);
@@ -361,7 +362,7 @@ body.bg-purple-gradient {
   background-image: -webkit-linear-gradient(top, #626584 0%, #494c62 100%);
   background-image: linear-gradient(to bottom, #626584 0%, #494c62 100%); }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003371}}
 body.bg-rust-gradient {
   background: url("../images/blank-bg.gif") repeat fixed;
   background-image: -ms-linear-gradient(bottom, #ce4c14 0%, #a7461c 100%);
@@ -371,59 +372,59 @@ body.bg-rust-gradient {
   background-image: -webkit-linear-gradient(bottom, #ce4c14 0%, #a7461c 100%);
   background-image: linear-gradient(to top, #ce4c14 0%, #a7461c 100%); }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003381}}
 body.bg-light-fabric {
   background: url("../images/bg-fabric.png") repeat fixed; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003384}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003385}}
 body.bg-light-cloth {
   background: url("../images/bg-cloth.png") repeat fixed; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003388}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003389}}
 body.bg-tiles {
   background: url("../images/bg-tiles.png") repeat fixed; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003392}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003393}}
 body.bg-retro1 {
   background: url("../images/bg-retro1.png") repeat fixed; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003396}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003397}}
 body.bg-retro2 {
   background: url("../images/bg-retro2.png") repeat fixed; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003400}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003401}}
 body.bg-retro3 {
   background: url("../images/bg-retro3.png") repeat fixed; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003404}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003405}}
 body.bg-retro4 {
   background: url("../images/bg-retro4.png") repeat fixed; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003408}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003409}}
 body.bg-retro5 {
   background: url("../images/bg-retro5.png") repeat fixed; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003412}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003413}}
 body.bg-abstract1 {
   background: url("../images/bg-abstract1.png") repeat fixed; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003416}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003417}}
 body.bg-abstract2 {
   background: url("../images/bg-abstract2.png") repeat fixed; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003420}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003421}}
 body.bg-abstract3 {
   background: url("../images/bg-abstract3.png") repeat fixed; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003424}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003425}}
 body.bg-abstract4 {
   background: url("../images/bg-abstract4.png") repeat fixed; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003428}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003429}}
 body.bg-abstract5 {
   background: url("../images/bg-abstract5.png") repeat fixed; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003432}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003433}}
 body.bg-dark-linen #colophon {
   /* for IE 9 */
   background: #b8b8b8;
@@ -440,7 +441,7 @@ body.bg-dark-linen #colophon {
   /* w3c markup, ie10 release preview */
   background-image: linear-gradient(to top, #cfcfcf 0%, #9c9c9c 100%); }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003451}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/holos\.pantheon\/sites\/all\/themes\/omega_kickstart\/scss\/design\.scss}line{font-family:\00003452}}
 body.bg-dark-linen #colophon p,
 body.bg-dark-linen #colophon li,
 body.bg-dark-linen #colophon div {
