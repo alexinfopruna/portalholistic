@@ -52,15 +52,13 @@ color: #999;
 .banner-ar{margin-top:10px;
            border:black solid 1px;
 }
-/*
+
 .zone-user-wrapper {
-    position: relative !important;
-    z-index: 200;
+    /*position: relative !important;*/
+    z-index: 501 !important;
 }
 
-*/
 
-div{z-index:2}
 
 
 
@@ -102,3 +100,4 @@ div{z-index:2}
     .logo-img {margin:0;}
     margin:45px 0 0px 0;
 }
+

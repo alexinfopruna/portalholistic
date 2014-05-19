@@ -55,7 +55,7 @@ css[global.css][options][weight] = '10'
 
 css[holos.css][name] = 'Estils per portalholistic'
 css[holos.css][description] = 'Estils generals'
-css[holos.css][options][weight] = '99'
+css[holos.css][options][weight] = '501'
 
 css[design.css][name] = 'Estils per portalholistic'
 css[design.css][description] = 'Estils generals'
